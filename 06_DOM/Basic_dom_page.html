@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+/* in DOM we can access the Element by some method and manuplate the values is Called DOM
+
+✅ DOM Selection Methods:-
+
+Method	                                                  Description
+
+getElementById('id')	                                  Selects an element by ID
+getElementsByClassName('class')	                        Returns HTMLCollection of elements with the given class
+getElementsByTagName('tag')	                            Returns HTMLCollection of elements with the given tag
+querySelector('selector')	                              Returns the first element matching the CSS selector
+querySelectorAll('selector')	                          Returns a NodeList of all elements matching the selector
+document.forms	                                        Gets all <form> elements
+document.images	                                        Gets all <img> elements
+document.links	                                        Gets all <a> elements with href
+
+
+
+
+🛠️ DOM Manipulation Methods:-
+
+Method / Property	                                                              Description
+
+element.innerHTML	                                                              Get/set the HTML inside the element
+element.innerText	                                                              Get/set the text content (visible)
+element.textContent	                                                            Get/set all text content (even hidden)
+element.setAttribute('attr', value)	                                            Set an attribute (e.g., href, src, id)
+element.getAttribute('attr')	                                                  Get an attribute
+element.removeAttribute('attr')	                                                Remove an attribute
+element.classList.add('class')	                                                Add a class
+element.classList.remove('class')	                                              Remove a class
+element.classList.toggle('class')	                                              Toggle a class
+element.style.property = value	                                                Change inline CSS style
+
+
+
+
+
+🔁 DOM Node Modification Methods:-
+
+Method	                                                                Description
+
+document.createElement('tag')	                                          Create a new HTML element
+parent.appendChild(child)	                                              Append child element to a parent
+parent.insertBefore(newNode, existingNode)	                            Insert new node before existing
+element.remove()	                                                      Remove the element
+element.cloneNode(true)	                                                Clone an element (true = deep clone)
+element.replaceWith(newElement)	                                        Replace an element with another
+
+
+
+
+🧠 DOM Traversal:
+
+Property	                                                              Description
+
+element.parentElement	                                                  Gets parent node
+element.children	                                                      Gets child elements
+element.firstElementChild / lastElementChild	                          Gets first/last child element
+element.nextElementSibling / previousElementSibling	                    Navigate to siblings
+
+
+*/
