@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body style="background-color: gray; font-family: sans-serif; color: white; text-align: center;">
+    <h1>
+        0	UNSENT	Client has been created. open() not called yet.<br/>
+        1	OPENED	open() has been called.<br/>
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.<br/>
+        3	LOADING	Downloading; responseText holds partial data.<br/>
+        4	DONE	The operation is complete.<br/>
+    </h1>
+
+
+     <!-- Display Area -->
+  <div id="profile" style="margin-top: 30px;">
+    <img id="avatar" src="" alt="Profile Pic" width="150" style="border-radius: 50%; box-shadow: 0 0 10px black;">
+    <h2 id="followers">Followers: ...</h2>
+    <h2 id="following">Following: ...</h2>
+  </div>
+
+
+
+  <script>
+    
+    const responseUrl = 'https://api.github.com/users/Abhishek-Singh5';
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', responseUrl);
+
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState, xhr.status);
+
+        if(xhr.readyState === 4  &&  xhr.status === 200){
+            const data = JSON.parse(this.responseText)
+            // console.log(typeof data);
+
+            // Logging
+            console.log("followers :- ", data.followers);
+            console.log("following :- ", data.following);
+            console.log("photo :- ", data.avatar_url);
+
+            // DOM
+            document.getElementById("avatar").src = data.avatar_url;
+            document.getElementById("followers").textContent = `Followers: ${data.followers}`;
+            document.getElementById("following").textContent = `Following: ${data.following}`;
+        }
+    }
+
+    xhr.send();
+
+
+</script>
+
+
+</body>
+</html>
